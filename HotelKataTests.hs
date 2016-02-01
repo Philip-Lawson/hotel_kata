@@ -15,7 +15,9 @@ runTests :: Bool
 runTests = all (\(expected,actual) -> expected == actual) $ map (fmap getOccupiedRoom) testHotels
 
 testHotels :: [(Expected, String)]
-testHotels = [singleRoom, thirdBuilding, a, b, c, d, e]
+testHotels = [failure, singleRoom, thirdBuilding, a, b, c, d, e]
+
+failure = (Nothing, "#####")
 
 singleRoom = ( Just (1,1,1), "*" )
 
