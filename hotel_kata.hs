@@ -7,9 +7,6 @@ type RoomNum = Int
 type FloorPlan = String
 type OccupiedFloor = String
 
-main :: IO ()
-main = putStrLn "why?!!!!"
-
 parseHotel :: String -> Maybe (FloorPlan, Hotel)
 parseHotel [] = Nothing
 parseHotel input = return (x, x:xs)
